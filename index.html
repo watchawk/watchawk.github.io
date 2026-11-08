@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mail Poll</title>
+  <style>
+    :root { --bg: #f6f8f7; --ink: #14302e; --muted: #55696a; --line: #cbd8d6; --link: #1b5fa8; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0f1d1c; --ink: #e4eeec; --muted: #93a9a7; --line: #2a3f3d; --link: #7db4ee; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { font-size: 2rem; margin: 0 0 0.25rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; }
+    p, li { max-width: 62ch; }
+    .lede { color: var(--muted); margin-top: 0; }
+    a { color: var(--link); }
+    nav { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    nav a { margin-right: 1.25rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mail Poll</h1>
+    <p class="lede">A small private notification tool for one family. It is not a public service.</p>
+
+    <h2>What it does</h2>
+    <p>Mail Poll checks a Gmail inbox on a schedule, with the account owner's agreement, and compares incoming messages against a list of keywords and sender names. When a message matches, it sends a short alert containing the sender and the subject line to the person who runs the tool.</p>
+
+    <h2>What access it asks for</h2>
+    <p>Read-only access to Gmail. It cannot send, delete, or change any email. Each person who signs in does so for their own account and can remove the access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+    <h2>Who it is for</h2>
+    <p>Mail Poll is used by a single household. It has no public sign-up and is not offered to other users.</p>
+
+    <p>Mail Poll's use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <nav aria-label="Policies">
+      <a href="privacy/">Privacy policy</a>
+      <a href="terms/">Terms of service</a>
+    </nav>
+  </main>
+</body>
+</html>
