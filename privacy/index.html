@@ -28,13 +28,13 @@
     <p>When the owner of a Gmail account signs in and agrees, Mail Poll gets read-only access to that mailbox. It reads recent messages to check them against a list of keywords and sender names. This is the only purpose.</p>
 
     <h2>What is stored and sent</h2>
-    <p>For a message that matches, Mail Poll records the sender and the subject line, and the time it was received. The message text and attachments are not copied, stored, or sent anywhere. Messages that do not match are not recorded, apart from an internal message ID kept so the same message is not checked twice.</p>
+    <p>For a message that matches, Mail Poll sends the sender, the subject line, the time it was received and the text of the message as an alert. Attachments are not included. A short summary of matches (sender, subject and time only) is kept for a status page. Messages that do not match are not copied or sent anywhere, and are not recorded apart from an internal message ID kept so the same message is not checked twice.</p>
 
     <h2>Who receives it</h2>
-    <p>The sender and subject of a matching message are sent as an alert to the person who runs Mail Poll, through Telegram and through a private GitHub repository. These services only deliver and hold the alert. The information is not sold, not used for advertising, and not shared with anyone else.</p>
+    <p>The alert for a matching message is sent to the person who runs Mail Poll, through Telegram and through a private GitHub repository. These services only deliver and hold the alert, which includes the message text. The information is not sold, not used for advertising, and not shared with anyone else.</p>
 
     <h2>How long it is kept</h2>
-    <p>Alerts stay in the private repository until the person running Mail Poll deletes them. A summary file used for a status page is kept for 7 days. Sign-in credentials are held as encrypted secrets in the private repository.</p>
+    <p>Alerts stay in the private repository and in the Telegram chat until the person running Mail Poll deletes them. A summary file used for a status page, which holds sender, subject and time only, is kept for 7 days. Sign-in credentials are held as encrypted secrets in the private repository.</p>
 
     <h2>Your choices</h2>
     <p>The account owner can remove Mail Poll's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After that, Mail Poll can no longer read the mailbox. To ask for stored alerts to be deleted, email <a href="mailto:watchawk@proton.me">watchawk@proton.me</a>.</p>
