@@ -32,11 +32,14 @@
 
     <h2>Payment alerts</h2>
     <p>Some matching messages are payment alerts from a bank or payment app, such as a UPI or card payment. For these, a small record is also kept so payments can be tracked over time: the amount, the payee name or UPI ID shown in the alert, the bank or app, whether money was paid out or received, the mailbox address and the time. The record never includes the message text, account or card numbers, balances or transaction reference numbers. It is held on a private home server run by the person running Mail Poll, not on a public service.</p>
+    <h2>Daily test message</h2>
+    <p>To confirm that alerts still work, one short, clearly labelled test email may be sent each day to one of the connected mailboxes by the person running Mail Poll. It is recognised by its subject and sender, is not treated as a match, is not kept in the log, and its text is not read. It can be deleted.</p>
+
     <h2>Who receives it</h2>
     <p>The alert for a matching message is sent to the person who runs Mail Poll, through Telegram and through a private GitHub repository. These services only deliver and hold the alert, which includes the message text. To start a check promptly when mail arrives, Google Cloud Pub/Sub and Cloudflare relay a change notification. It contains only the mailbox address and a change counter, never any message content. The information is not sold, not used for advertising, and not shared with anyone else.</p>
 
     <h2>How long it is kept</h2>
-    <p>Alerts stay in the private repository and in the Telegram chat until the person running Mail Poll deletes them. The mail log, which holds sender, subject, time and status only and never message text, is kept in the private repository until the person running Mail Poll deletes it. The payment record described above is kept until the person running Mail Poll deletes it. The status file used for the dashboard is kept for 7 days. Sign-in credentials are held as encrypted secrets in the private repository.</p>
+    <p>Alerts stay in the private repository and in the Telegram chat until the person running Mail Poll deletes them. The mail log, which holds sender, subject, time and status only and never message text, is kept in the private repository until the person running Mail Poll deletes it. The payment record described above is kept until the person running Mail Poll deletes it. The status file used for the dashboard is kept for 7 days. Sign-in credentials are held as encrypted secrets in the private repository, and a copy is held on a private home server run by the person running Mail Poll, which carries out the frequent checks. That server is not reachable from the public internet.</p>
 
     <h2>Your choices</h2>
     <p>The account owner can remove Mail Poll's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After that, Mail Poll can no longer read the mailbox. To ask for stored alerts to be deleted, email <a href="mailto:watchawk@proton.me">watchawk@proton.me</a>.</p>
