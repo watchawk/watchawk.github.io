@@ -22,7 +22,7 @@
 <body>
   <main>
     <h1>Privacy policy</h1>
-    <p class="lede">Mail Poll. Last updated 12 November 2026.</p>
+    <p class="lede">Mail Poll. Last updated 13 November 2026.</p>
 
     <h2>What Mail Poll accesses</h2>
     <p>When the owner of a Gmail account signs in and agrees, Mail Poll gets read-only access to that mailbox. It reads recent messages, including those in the Trash and Spam folders, to check them against a list of keywords and sender names. This is the only purpose.</p>
@@ -34,6 +34,9 @@
     <p>Some matching messages are payment alerts from a bank or payment app, such as a UPI or card payment. For these, a small record is also kept so payments can be tracked over time: the amount, the payee name or UPI ID shown in the alert, the bank or app, whether money was paid out or received, the mailbox address and the time. The record never includes the message text, account or card numbers, balances or transaction reference numbers. It is held on a private home server run by the person running Mail Poll, not on a public service.</p>
     <h2>Daily test message</h2>
     <p>To confirm that alerts still work, one short, clearly labelled test email may be sent each day to one of the connected mailboxes by the person running Mail Poll. It is recognised by its subject and sender, is not treated as a match, is not kept in the log, and its text is not read. It can be deleted.</p>
+
+    <h2>Mail settings check</h2>
+    <p>Mail Poll can also look at each connected mailbox's settings, at most twice a day, to see whether a filter has been set up that deletes mail or keeps it out of the inbox, or whether forwarding to another address is turned on. Either could stop alerts from seeing a message. This uses the same read-only access, and nothing in the mailbox is ever changed. What is kept is only a count of such filters, a fingerprint that lets a new one be recognised, and whether forwarding is on or off. What a filter matches and any forwarding address are not stored or sent anywhere. If a new filter of this kind or forwarding appears, the person running Mail Poll gets a short note on Telegram.</p>
 
     <h2>Who receives it</h2>
     <p>The alert for a matching message is sent to the person who runs Mail Poll, through Telegram and through a private GitHub repository. These services only deliver and hold the alert, which includes the message text. To start a check promptly when mail arrives, Google Cloud Pub/Sub and Cloudflare relay a change notification. It contains only the mailbox address and a change counter, never any message content. The information is not sold, not used for advertising, and not shared with anyone else.</p>
