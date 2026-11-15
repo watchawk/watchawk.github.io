@@ -22,7 +22,7 @@
 <body>
   <main>
     <h1>Privacy policy</h1>
-    <p class="lede">Mail Poll. Last updated 15 November 2026.</p>
+    <p class="lede">Mail Poll. Last updated 16 November 2026.</p>
 
     <h2>What Mail Poll accesses</h2>
     <p>When the owner of a Gmail account signs in and agrees, Mail Poll gets read-only access to that mailbox. It reads recent messages, including those in the Trash and Spam folders, to check them against a list of keywords and sender names. This is the only purpose.</p>
@@ -40,6 +40,9 @@
 
     <h2>Payment text messages</h2>
     <p>With the phone owner's agreement, a payment text message from a bank or payment app (for example a UPI or card payment, sent or received) can be passed on from the phone to the person running Mail Poll. Only texts that mention an amount of money are passed on. Any one-time code, PIN or CVV in a text is removed, as far as it can be recognised, on the phone before it is sent, and removed again before anything is stored. The text goes through a relay on Cloudflare that holds it for seconds to minutes, and for at most 3 days if the home server is switched off, and then deletes it. What is kept is the same small payment record as for payment emails: the amount, the payee or UPI ID shown, the last 4 digits of the receiving account, card or loan when the text shows them, the bank or app, whether money was paid out or received (or whether it confirms a credit card or loan payment), and the time. The text itself is not kept, and the alert that is sent to the person running Mail Poll shows only those details. The phone owner can switch this off at any time by turning off the automation in the Shortcuts app.</p>
+
+    <h2>Payment summaries</h2>
+    <p>The payment records described above are also added up into a private monthly summary for the person running Mail Poll: money in and out for each pay period, spending grouped into everyday categories (such as food delivery, shopping or travel) based on the payee name, fixed payments such as loan instalments and card bills, and simple suggestions for saving. Salary, pay day, loan and card amounts are typed in by the person running Mail Poll; nothing new is read from any mailbox or phone to do this. The summary is worked out on the private home server when it is viewed and is not stored, apart from those typed-in figures and any category corrections. It can be saved as a PDF for the person running Mail Poll's own use.</p>
 
     <h2>Who receives it</h2>
     <p>The alert for a matching message is sent to the person who runs Mail Poll, through Telegram and through a private GitHub repository. These services only deliver and hold the alert, which includes the message text. To start a check promptly when mail arrives, Google Cloud Pub/Sub and Cloudflare relay a change notification. It contains only the mailbox address and a change counter, never any message content. The information is not sold, not used for advertising, and not shared with anyone else.</p>
